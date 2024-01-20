@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 
-class FeedPage extends StatefulWidget {
+class GuestbookPage extends StatefulWidget {
 
-  const FeedPage({Key? key}) : super(key: key);
+  const GuestbookPage({Key? key}) : super(key: key);
 
   @override
-  State<FeedPage> createState() => _FeedPageState();
+  State<GuestbookPage> createState() => _GuestbookPageState();
 
 }
 
-class _FeedPageState extends State<FeedPage> {
+class _GuestbookPageState extends State<GuestbookPage> {
+
+  List<String> entries = <String>['아오 개짜증나...(줄바꿈)', '오늘은 꽁초를 주워따', '주변을 꺠끗이 합시당'];
 
   int _counter = 0;
 
@@ -18,19 +20,33 @@ class _FeedPageState extends State<FeedPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('피드 페이지'),
+        // title: const Text('방명록'),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            Text(
-              '피드 페이지',
-            ),
-          ],
+        child: ListView.separated(
+            padding: const EdgeInsets.all(8),
+            itemCount: entries.length,
+            itemBuilder: (BuildContext context, int index) {
+              return Container(
+                padding: const EdgeInsets.all(2),
+                height: 50,
+                color: Theme.of(context).colorScheme.inversePrimary,
+                child: Row(
+                  children: <Widget>[
+                    const CircleAvatar(
+                      backgroundColor: Colors.blueAccent, // 최초 접속한 유저마다 닉네임 및 고유색상을 부여해주자
+                      child: Text("이"),
+                    ),
+                    const SizedBox(width: 6),
+                    Text(entries[index]),
+                  ]
+                )
+              );
+            },
+            separatorBuilder: (BuildContext context, int index) => const Padding(padding: EdgeInsets.all(4))
+        )
         ),
-      ),
-    );
+      );
   }
 
 }
