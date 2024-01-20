@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_guest_book_app/page/feed/feed.dart';
+import 'package:my_guest_book_app/page/guestbook/guestbook.dart';
 import 'package:my_guest_book_app/page/navigation/navigation.dart';
 
 void main() {
