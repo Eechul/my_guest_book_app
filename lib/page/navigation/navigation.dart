@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../feed/feed.dart';
+import '../guestbook/guestbook.dart';
 
 class NavigationPage extends StatefulWidget {
   const NavigationPage({super.key});
@@ -28,24 +27,21 @@ class _NavigationPageState extends State<NavigationPage> {
           NavigationDestination(
             selectedIcon: Icon(Icons.home),
             icon: Icon(Icons.home_outlined),
-            label: 'Home',
+            label: '방명록',
           ),
+          // NavigationDestination(
+          //   icon: Badge(child: Icon(Icons.notifications_sharp)),
+          //   label: '??',
+          // ),
           NavigationDestination(
-            icon: Badge(child: Icon(Icons.notifications_sharp)),
-            label: 'Notifications',
-          ),
-          NavigationDestination(
-            icon: Badge(
-              label: Text('2'),
-              child: Icon(Icons.messenger_sharp),
-            ),
-            label: 'Messages',
+            icon: Badge(child: Icon(Icons.person)),
+            label: 'MY',
           ),
         ],
       ),
       body: <Widget>[
         /// Feed page
-        const FeedPage(),
+        const GuestbookPage(),
         /// Notifications page
         const Padding(
           padding: EdgeInsets.all(8.0),
