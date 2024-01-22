@@ -15,8 +15,8 @@ class _LocationSelectSheetState extends State<LocationSelectSheet> {
 
   @override
   Widget build(BuildContext context) {
-    final topInset = MediaQuery.of(context).viewInsets.top;
-    final bottomInset = MediaQuery.of(context).viewInsets.bottom;
+
+
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).requestFocus(FocusNode());
