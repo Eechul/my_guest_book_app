@@ -12,6 +12,7 @@ class LocationSelectSheet extends StatefulWidget {
 }
 
 class _LocationSelectSheetState extends State<LocationSelectSheet> {
+  final GlobalKey<FormState> formKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -31,15 +32,23 @@ class _LocationSelectSheetState extends State<LocationSelectSheet> {
       },
       child: Container(
           color: Colors.white,
-          height: MediaQuery.of(context).size.height - 100,
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height - 70,
           child: Padding(
             padding: EdgeInsets.only(left: 8.0, right: 8.0, top: 16.0),
-            child: Center(
-              child: Text('Location Select Sheet'),
-            ),
+            child: Form(
+              key: formKey,
+              child: Column(
+                children: [
+                  ElevatedButton(
+                      onPressed: () {},
+                      child: const Text('내 위치로 검색')
+                  ),
+                ],
+            )
           )
         )
-
+      )
     );
   }
 
