@@ -26,6 +26,12 @@ class _LocationSelectSheetState extends State<LocationSelectSheet> {
     // 5. 시트 닫힌 후, 상단 바에 지역 표시
     // 6. 5번 이후에, 지역에 맞는 방명록 리스트 표시
 
+
+    // 1번의 구현방법은
+    // 위도와 경도를 얻는 플러그인을 사용한다. : geolocator, https://pub.dev/packages/geolocator
+    // 위도와 경도를 가지고 위치 주소를 얻는다 : naver_map_plugin, https://pub.dev/packages/naver_map_plugin
+    // 유저에게 주소 확인을 받고, 원하는 주소가 맞다면 버튼을 누르게 한다 -> 완료
+    
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).requestFocus(FocusNode());
