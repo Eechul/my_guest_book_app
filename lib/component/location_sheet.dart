@@ -29,7 +29,9 @@ class _LocationSelectSheetState extends State<LocationSelectSheet> {
 
     // 1번의 구현방법은
     // 위도와 경도를 얻는 플러그인을 사용한다. : geolocator, https://pub.dev/packages/geolocator
-    // 위도와 경도를 가지고 위치 주소를 얻는다 : naver_map_plugin, https://pub.dev/packages/naver_map_plugin
+    // 위도와 경도를 가지고 위치 주소를 얻는다 : googleapi maps
+    //  - google api key 발급 참고: https://developers.google.com/maps/documentation/geocoding/cloud-setup?hl=ko
+    //  - 요청 url 'https://maps.googleapis.com/maps/api/geocode/json?latlng=$lat,$lng&key=$GOOGLE_API_KEY&language=ko';
     // 유저에게 주소 확인을 받고, 원하는 주소가 맞다면 버튼을 누르게 한다 -> 완료
     
     return GestureDetector(
