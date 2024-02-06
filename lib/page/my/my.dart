@@ -40,9 +40,22 @@ class _MyPageState extends State<MyPage> {
               ),
               Card(
                 child: ListTile(
-                  leading: Icon(Icons.notifications_sharp),
-                  title: Text('Notification 2'),
-                  subtitle: Text('This is a notification'),
+                  title: Text('공지사항'),
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  title: Text('FAQ'),
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  title: Text('개발자 정보'),
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  title: Text('로그아웃'),
                 ),
               ),
             ],
