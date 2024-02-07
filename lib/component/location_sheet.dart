@@ -32,7 +32,8 @@ class _LocationSelectSheetState extends State<LocationSelectSheet> {
     //  - google api key 발급 참고: https://developers.google.com/maps/documentation/geocoding/cloud-setup?hl=ko
     //  - 요청 url 'https://maps.googleapis.com/maps/api/geocode/json?latlng=$lat,$lng&key=$GOOGLE_API_KEY&language=ko';
     // 유저에게 주소 확인을 받고, 원하는 주소가 맞다면 버튼을 누르게 한다 -> 완료
-    
+
+    // 내 위치로 검색(혹은 등록) 버튼을 누르면, 현재 위치를 아래에 출력해주고, '완료' 버튼을 누르게 한다.
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).requestFocus(FocusNode());
