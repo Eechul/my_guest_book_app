@@ -29,6 +29,8 @@ class _MyPageState extends State<MyPage> {
           child: Column(
             children: <Widget>[
               Card(
+                // 사진 업로드와 자기소개를 쓸 수 있게 해야한다.
+                // 사진이 없을 시, 닉네임 첫 글자 넣기
                 child: ListTile(
                   leading: ProfileImage(
                     color: Colors.blueAccent, // 최초 접속한 유저마다 닉네임 및 고유색상을 부여해주자
